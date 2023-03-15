@@ -18,6 +18,9 @@ import com.linkedin.kafka.cruisecontrol.metricsreporter.metric.CruiseControlMetr
 import static com.linkedin.kafka.cruisecontrol.monitor.sampling.MetricFetcherManager.BROKER_CAPACITY_CONFIG_RESOLVER_OBJECT_CONFIG;
 import static com.linkedin.cruisecontrol.common.utils.Utils.validateNotNull;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * This is a base implementation of a MetricSampler that can be overridden by concrete Metric Sampler
  * implementations. It takes care of the common logic of initializing a {@link CruiseControlMetricsProcessor},
@@ -26,6 +29,9 @@ import static com.linkedin.cruisecontrol.common.utils.Utils.validateNotNull;
  */
 public abstract class AbstractMetricSampler implements MetricSampler {
     private CruiseControlMetricsProcessor _metricsProcessor;
+
+    private static final Logger LOG = LoggerFactory.getLogger(AbstractMetricSampler.class);
+
 
     @Override
     public void configure(Map<String, ?> configs) {
@@ -47,7 +53,13 @@ public abstract class AbstractMetricSampler implements MetricSampler {
 
     @Override
     public Samples getSamples(MetricSamplerOptions metricSamplerOptions) throws SamplingException {
+
+        LOG.info(">>>>>>>>>>>>>>>>> getSamples");
+
+
         int totalMetricsAdded = retrieveMetricsForProcessing(metricSamplerOptions);
+
+        LOG.info(">>>>>>>>>>>>>>>>> totalMetricsAdded {}", totalMetricsAdded);
 
         try {
             if (totalMetricsAdded > 0) {

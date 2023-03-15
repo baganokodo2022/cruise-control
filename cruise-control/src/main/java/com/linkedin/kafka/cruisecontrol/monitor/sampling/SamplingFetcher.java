@@ -101,6 +101,8 @@ class SamplingFetcher extends MetricFetcher {
   protected void useBrokerMetricSamples(Set<BrokerMetricSample> brokerMetricSamples) {
     Set<Integer> returnedBrokerIds = new HashSet<>();
     if (brokerMetricSamples != null) {
+      LOG.info(">>>>>>>>>>>>>>>>>>>>>> brokerMetricSamples.size = {}", brokerMetricSamples.size());
+      
       int discarded = 0;
       Iterator<BrokerMetricSample> iter = brokerMetricSamples.iterator();
       while (iter.hasNext()) {

@@ -66,18 +66,33 @@ public class BrokerLoad {
     RawMetricType rawMetricType = ccm.rawMetricType();
     switch (rawMetricType.metricScope()) {
       case BROKER:
+
+        // LOG.info(">>>>>>>>>>>>>> BROKER recordMetric {}", ccm);
+
         _brokerMetrics.recordCruiseControlMetric(ccm);
         break;
       case TOPIC:
+
+        // LOG.info(">>>>>>>>>>>>>> TOPIC recordMetric {}", ccm);
+
         TopicMetric tm = (TopicMetric) ccm;
-        _dotHandledTopicMetrics.computeIfAbsent(tm.topic(), t -> new RawMetricsHolder())
+        _dotHandledTopicMetrics.computeIfAbsent(replaceDotsWithUnderscores(tm.topic()), t -> new RawMetricsHolder())
                                .recordCruiseControlMetric(ccm);
         break;
       case PARTITION:
+
+        // LOG.info(">>>>>>>>>>>>>> PARTITION recordMetric {}", ccm);
+
         PartitionMetric pm = (PartitionMetric) ccm;
-        _dotHandledPartitionMetrics.computeIfAbsent(new TopicPartition(pm.topic(), pm.partition()), tp -> new RawMetricsHolder())
+        _dotHandledPartitionMetrics.computeIfAbsent(new TopicPartition(
+            replaceDotsWithUnderscores(pm.topic()), pm.partition()), tp -> new RawMetricsHolder())
                                    .recordCruiseControlMetric(ccm);
-        _dotHandledTopicsWithPartitionSizeReported.add(pm.topic());
+
+        _dotHandledTopicsWithPartitionSizeReported.add(replaceDotsWithUnderscores(pm.topic()));
+
+        // LOG.info(">>>>>>>>>>>>>> _dotHandledTopicsWithPartitionSizeReported topic {}", pm.topic());
+        // LOG.info(">>>>>>>>>>>>>> _dotHandledTopicsWithPartitionSizeReported {}", _dotHandledTopicsWithPartitionSizeReported.size());
+
         break;
       default:
         throw new IllegalStateException(String.format("Should never be here. Unrecognized metric scope %s",
@@ -200,6 +215,9 @@ public class BrokerLoad {
   public void prepareBrokerMetrics(Cluster cluster, int brokerId, long time) {
     boolean enoughTopicPartitionMetrics = enoughTopicPartitionMetrics(cluster, brokerId);
     // Ensure there are enough topic level metrics.
+
+    LOG.info(">>>>>>>>>>>>>>>>> prepareBrokerMetrics enoughTopicPartitionMetrics {} ", enoughTopicPartitionMetrics);
+
     if (enoughTopicPartitionMetrics) {
       Map<RawMetricType, Double> sumOfTopicMetrics = new HashMap<>();
       for (String dotHandledTopic : _dotHandledTopicsWithPartitionSizeReported) {
@@ -219,7 +237,14 @@ public class BrokerLoad {
 
     // A broker metric is only available if it has enough valid topic metrics and it has reported
     // replication bytes in/out metrics.
+    
+    LOG.info(">>>>>>>>>>>>>>>>> prepareBrokerMetrics enoughTopicPartitionMetrics {}, _missingBrokerMetricsInMinSupportedVersion {} "
+    , enoughTopicPartitionMetrics, _missingBrokerMetricsInMinSupportedVersion.isEmpty());
+
+    
     _minRequiredBrokerMetricsAvailable = enoughTopicPartitionMetrics && _missingBrokerMetricsInMinSupportedVersion.isEmpty();
+
+
   }
 
   /**
@@ -289,6 +314,9 @@ public class BrokerLoad {
    * @return True if there are enough topic level metrics, false otherwise.
    */
   private boolean enoughTopicPartitionMetrics(Cluster cluster, int brokerId) {
+
+    LOG.info(">>>>>>>>>>>>>>>>> enoughTopicPartitionMetrics");
+
     Set<String> missingTopics = new HashSet<>();
     Set<String> topicsInBroker = new HashSet<>();
     AtomicInteger missingPartitions = new AtomicInteger(0);
@@ -297,18 +325,42 @@ public class BrokerLoad {
       // If the broker does not have any leader partition, return true immediately.
       return true;
     }
+
+    // LOG.info(">>>>>>>>>>>>>>>>> leaderPartitionsInNode {}", leaderPartitionsInNode.size());
+
     leaderPartitionsInNode.forEach(info -> {
+
+      // LOG.info(">>>>>>>>>>>>>>>>> leaderPartitionsInNode info = {}", info.toString());
+      // LOG.info(">>>>>>>>>>>>>>>>> leaderPartitionsInNode topic = {}", info.topic());
+      // LOG.info(">>>>>>>>>>>>>>>>> leaderPartitionsInNode leader = {}", info.leader());
+      // LOG.info(">>>>>>>>>>>>>>>>> leaderPartitionsInNode leader id = {}, host = {}", 
+      //   info.leader().id(), info.leader().host());
+      // LOG.info(">>>>>>>>>>>>>>>>> leaderPartitionsInNode ISR.length = {}", info.inSyncReplicas().length);
+
       String topicWithDotHandled = replaceDotsWithUnderscores(info.topic());
       topicsInBroker.add(topicWithDotHandled);
+
+      // LOG.info(">>>>>>>>>>>>>>>>> topicWithDotHandled {}, {}", 
+      //   topicWithDotHandled, _dotHandledTopicsWithPartitionSizeReported);
+
       if (!_dotHandledTopicsWithPartitionSizeReported.contains(topicWithDotHandled)) {
         missingPartitions.incrementAndGet();
         missingTopics.add(topicWithDotHandled);
       }
     });
+
+    // LOG.info(">>>>>>>>>>>>>>>>> leaderPartitionsInNode {}", leaderPartitionsInNode.size());
+    // LOG.info(">>>>>>>>>>>>>>>>> missingTopics {}", missingTopics.size());
+    // LOG.info(">>>>>>>>>>>>>>>>> missingPartitions {}", missingPartitions.get());
+
     boolean result = ((double) missingTopics.size() / topicsInBroker.size()) <= MAX_ALLOWED_MISSING_TOPIC_METRIC_PERCENT
                      && ((double) missingPartitions.get() / cluster.partitionsForNode(brokerId).size()
                          <= MAX_ALLOWED_MISSING_PARTITION_METRIC_PERCENT);
     if (!result) {
+
+      LOG.info("Broker {} is missing {}/{} topics metrics and {}/{} leader partition metrics. Missing leader topics: {}.", brokerId,
+      missingTopics.size(), topicsInBroker.size(), missingPartitions.get(), cluster.partitionsForNode(brokerId).size(), missingTopics);
+
       LOG.warn("Broker {} is missing {}/{} topics metrics and {}/{} leader partition metrics. Missing leader topics: {}.", brokerId,
                missingTopics.size(), topicsInBroker.size(), missingPartitions.get(), cluster.partitionsForNode(brokerId).size(), missingTopics);
     }

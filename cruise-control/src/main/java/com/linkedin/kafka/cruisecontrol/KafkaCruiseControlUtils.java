@@ -573,8 +573,8 @@ public class KafkaCruiseControlUtils {
                                                          List<MetadataResponse.TopicMetadata> topicMetadataList) {
     MetadataResponseData responseData = new MetadataResponseData();
     responseData.setThrottleTimeMs(AbstractResponse.DEFAULT_THROTTLE_TIME);
-    brokers.forEach(broker -> responseData.brokers().add(
-        new MetadataResponseData.MetadataResponseBroker().setNodeId(broker.id())
+    brokers.forEach(broker -> 
+            responseData.brokers().add(new MetadataResponseData.MetadataResponseBroker().setNodeId(broker.id())
                                                          .setHost(broker.host())
                                                          .setPort(broker.port())
                                                          .setRack(broker.rack())));

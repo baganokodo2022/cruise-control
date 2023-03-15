@@ -225,13 +225,31 @@ public class SamplingUtils {
                                                     Map<Integer, BrokerLoad> brokerLoadById,
                                                     long maxMetricTimestamp) throws UnknownVersionException {
     BrokerLoad brokerLoad = brokerLoadById.get(node.id());
+
+
     if (skipBuildingBrokerMetricSample(brokerLoad, node.id())) {
+
+      LOG.info(">>>>>>>>>>>>>>>>> skipBuildingBrokerMetricSample");
+
       return null;
     }
     MetricDef brokerMetricDef = KafkaMetricDef.brokerMetricDef();
-    BrokerMetricSample bms = new BrokerMetricSample(node.host(), node.id(), brokerLoad.brokerSampleDeserializationVersion());
+
+    LOG.info(">>>>>>>>>>>>>>>>> buildBrokerMetricSample node.host {}, node.port {}, node.id {}", node.host(), node.port(), node.id());
+
+    final String expectedHostPrefix = "b-" + node.id();
+    final String host = node.host().indexOf(expectedHostPrefix) != 0 ?
+         expectedHostPrefix + node.host().substring(node.host().indexOf(".")) : node.host();
+
+    LOG.info(">>>>>>>>>>>>>>>>> HOST {}", host);
+
+    BrokerMetricSample bms = new BrokerMetricSample(host, node.id(), brokerLoad.brokerSampleDeserializationVersion());
+
     for (Map.Entry<Byte, Set<RawMetricType>> entry : RawMetricType.brokerMetricTypesDiffByVersion().entrySet()) {
       for (RawMetricType rawBrokerMetricType : entry.getValue()) {
+
+        // LOG.info(">>>>>>>>>>>>>>>>> rawBrokerMetric {}, ", rawBrokerMetricType);
+
         // We require the broker to report all the metric types (including nullable values). Otherwise we skip the broker.
         if (!brokerLoad.brokerMetricAvailable(rawBrokerMetricType)) {
           LOG.warn("{}broker {} because it does not have {} metrics (serde version {}) or the metrics are inconsistent.",
@@ -241,6 +259,9 @@ public class SamplingUtils {
           MetricInfo metricInfo = brokerMetricDef.metricInfo(KafkaMetricDef.forRawMetricType(rawBrokerMetricType).name());
           double metricValue = brokerLoad.brokerMetric(rawBrokerMetricType);
           bms.record(metricInfo, metricValue);
+
+          // LOG.info(">>>>>>>>>>>>>>>>> broker metric {}, {} ", metricInfo, metricValue);
+
         }
       }
     }
@@ -295,14 +316,36 @@ public class SamplingUtils {
    * @return True to skip generating broker metric sample, false otherwise.
    */
   private static boolean skipBuildingBrokerMetricSample(BrokerLoad brokerLoad, int brokerId) {
+
+    LOG.info(">>>>>>>>>>>>>>>>> skipBuildingBrokerMetricSample brokerId {}, brokerLoad{}", brokerId, brokerLoad);
+
+    LOG.info(">>>>>>>>>>>>>>>>> skipBuildingBrokerMetricSample minRequiredBrokerMetricsAvailable {}", brokerLoad.minRequiredBrokerMetricsAvailable());
+
+
     if (brokerLoad == null) {
+
+      LOG.info(">>>>>>>>>>>>>>>>> {}broker {} because all broker metrics are missing.", SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
+
+
       LOG.warn("{}broker {} because all broker metrics are missing.", SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
       return true;
     } else if (!brokerLoad.minRequiredBrokerMetricsAvailable()) {
+      
+      LOG.info(">>>>>>>>>>>>>>>>> brokerLoad.minRequiredBrokerMetricsAvailable {}", brokerLoad.minRequiredBrokerMetricsAvailable());
+      LOG.info(">>>>>>>>>>>>>>>>> brokerLoad.missingBrokerMetricsInMinSupportedVersion.size {}", brokerLoad.missingBrokerMetricsInMinSupportedVersion().size());
+
+
       if (brokerLoad.missingBrokerMetricsInMinSupportedVersion().size() == 0) {
+        
+        LOG.info(">>>>>>>>>>>>>>>>>{}broker {} because there are not enough topic metrics to generate broker metrics.",
+        SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
+        
         LOG.warn("{}broker {} because there are not enough topic metrics to generate broker metrics.",
                  SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
       } else {
+        LOG.info(">>>>>>>>>>>>>>>>>{}broker {} because the following required metrics are missing {}.", SKIP_BUILDING_SAMPLE_PREFIX,
+        brokerId, brokerLoad.missingBrokerMetricsInMinSupportedVersion());
+
         LOG.warn("{}broker {} because the following required metrics are missing {}.", SKIP_BUILDING_SAMPLE_PREFIX,
                  brokerId, brokerLoad.missingBrokerMetricsInMinSupportedVersion());
       }

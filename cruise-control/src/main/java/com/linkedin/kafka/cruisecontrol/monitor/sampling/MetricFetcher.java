@@ -91,6 +91,10 @@ abstract class MetricFetcher implements Callable<Boolean> {
    * Execute one iteration of metric sampling for all the assigned partitions.
    */
   protected void fetchMetricsForAssignedPartitions() throws SamplingException {
+
+    LOG.info(">>>>>>>>>>>>>>>>> fetchMetricsForAssignedPartitions");
+
+
     final Timer.Context ctx = _fetchTimer.time();
 
     try {
@@ -116,6 +120,9 @@ abstract class MetricFetcher implements Callable<Boolean> {
   protected MetricSampler.Samples fetchSamples() throws SamplingException {
     MetricSamplerOptions metricSamplerOptions = new MetricSamplerOptions(
         _cluster, _assignedPartitions, _startTimeMs, _endTimeMs, _samplingMode, _metricDef, _timeout);
+
+    LOG.info(">>>>>>>>>>>>>>>>> fetchSamples");
+
     MetricSampler.Samples samples = _metricSampler.getSamples(metricSamplerOptions);
     if (samples == null) {
       samples = MetricSampler.EMPTY_SAMPLES;
