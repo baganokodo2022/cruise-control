@@ -32,7 +32,10 @@ public class SingleBrokerStats extends BasicStats {
 
   SingleBrokerStats(Broker broker, double potentialBytesOutRate, boolean isEstimated) {
     super(broker, potentialBytesOutRate);
-    _host = broker.host().name();
+
+    final String expectedHostPrefix = "b-" + broker.id();
+    _host = (broker.host().name().indexOf(expectedHostPrefix) != 0)?
+        expectedHostPrefix + broker.host().name().substring(broker.host().name().indexOf(".")) : broker.host().name();
     _id = broker.id();
     _state = broker.state();
     _isEstimated = isEstimated;

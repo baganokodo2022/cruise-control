@@ -123,7 +123,7 @@ public class CruiseControlMetricsProcessor {
 
     LOG.info(">>>>>>>>>>>>>>>>>>>>>> process 1");
 
-    LOG.info(">>>>>>>>>>>>>>>>>>>>>> cluster {}", cluster);
+    // LOG.info(">>>>>>>>>>>>>>>>>>>>>> cluster {}", cluster);
 
     updateCachedNumCoresByBroker(cluster);
     // Theoretically we should not move forward at all if a broker reported a different all topic bytes in from all

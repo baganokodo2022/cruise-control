@@ -13081,3 +13081,614 @@ Caused by: java.lang.NullPointerException
 2023.03.14 23:02:34 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/BrokerStats.java
 2023.03.14 23:02:34 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/BrokerStats.java
 2023.03.14 23:02:35 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/BrokerStats.java
+2023.03.14 23:04:45 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/test/java/com/linkedin/kafka/cruisecontrol/analyzer/OfflineProposalGenerator.java
+2023.03.14 23:04:56 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/model/ClusterModel.java
+2023.03.14 23:04:57 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/model/ClusterModel.java
+2023.03.14 23:05:18 WARN  Using indexes to guess the definition of BrokerStats
+2023.03.14 23:05:20 WARN  Using indexes to guess the definition of BrokerStats
+2023.03.14 23:05:21 WARN  Using indexes to guess the definition of BrokerStats
+2023.03.14 23:05:22 WARN  Using indexes to guess the definition of BrokerStats
+2023.03.14 23:06:32 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/BrokerStats.java
+2023.03.14 23:06:33 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:06:34 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/BrokerStats.java
+Mar 14, 2023 11:06:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14639
+2023.03.14 23:06:34 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:06:34 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:07:32 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:07:32 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:07:37 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/BrokerStats.java
+2023.03.14 23:07:50 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:07:50 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:07:58 WARN  Using indexes to guess the definition of host
+2023.03.14 23:07:58 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/model/Host.java
+2023.03.14 23:08:04 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:08:05 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:08:05 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:08:06 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:08:06 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:08:06 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:08:07 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:08:14 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java
+2023.03.14 23:08:15 WARN  Running javac-semanticdb failed for file:///Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java. Output:
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:8: error: cannot find symbol
+import com.linkedin.kafka.cruisecontrol.analyzer.OptimizationOptions;
+                                                ^
+  symbol:   class OptimizationOptions
+  location: package com.linkedin.kafka.cruisecontrol.analyzer
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:9: error: package com.linkedin.kafka.cruisecontrol.common does not exist
+import com.linkedin.kafka.cruisecontrol.common.Resource;
+                                              ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:10: error: cannot find symbol
+import com.linkedin.kafka.cruisecontrol.analyzer.ActionAcceptance;
+                                                ^
+  symbol:   class ActionAcceptance
+  location: package com.linkedin.kafka.cruisecontrol.analyzer
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:11: error: cannot find symbol
+import com.linkedin.kafka.cruisecontrol.analyzer.BalancingConstraint;
+                                                ^
+  symbol:   class BalancingConstraint
+  location: package com.linkedin.kafka.cruisecontrol.analyzer
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:12: error: cannot find symbol
+import com.linkedin.kafka.cruisecontrol.analyzer.BalancingAction;
+                                                ^
+  symbol:   class BalancingAction
+  location: package com.linkedin.kafka.cruisecontrol.analyzer
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:13: error: cannot find symbol
+import com.linkedin.kafka.cruisecontrol.analyzer.ActionType;
+                                                ^
+  symbol:   class ActionType
+  location: package com.linkedin.kafka.cruisecontrol.analyzer
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:14: error: package com.linkedin.kafka.cruisecontrol.exception does not exist
+import com.linkedin.kafka.cruisecontrol.exception.OptimizationFailureException;
+                                                 ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:15: error: package com.linkedin.kafka.cruisecontrol.model does not exist
+import com.linkedin.kafka.cruisecontrol.model.Broker;
+                                             ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:16: error: package com.linkedin.kafka.cruisecontrol.model does not exist
+import com.linkedin.kafka.cruisecontrol.model.ClusterModel;
+                                             ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:17: error: package com.linkedin.kafka.cruisecontrol.model does not exist
+import com.linkedin.kafka.cruisecontrol.model.Load;
+                                             ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:18: error: package com.linkedin.kafka.cruisecontrol.model does not exist
+import com.linkedin.kafka.cruisecontrol.model.Replica;
+                                             ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:20: error: package com.linkedin.kafka.cruisecontrol.model does not exist
+import com.linkedin.kafka.cruisecontrol.model.ReplicaSortFunctionFactory;
+                                             ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:21: error: package com.linkedin.kafka.cruisecontrol.model does not exist
+import com.linkedin.kafka.cruisecontrol.model.SortedReplicasHelper;
+                                             ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:22: error: package com.linkedin.kafka.cruisecontrol.monitor does not exist
+import com.linkedin.kafka.cruisecontrol.monitor.ModelCompletenessRequirements;
+                                               ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:26: error: package org.slf4j does not exist
+import org.slf4j.Logger;
+                ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:27: error: package org.slf4j does not exist
+import org.slf4j.LoggerFactory;
+                ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:29: error: cannot find symbol
+import static com.linkedin.kafka.cruisecontrol.analyzer.ActionAcceptance.ACCEPT;
+                                                       ^
+  symbol:   class ActionAcceptance
+  location: package com.linkedin.kafka.cruisecontrol.analyzer
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:29: error: static import only from classes and interfaces
+import static com.linkedin.kafka.cruisecontrol.analyzer.ActionAcceptance.ACCEPT;
+^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:30: error: cannot find symbol
+import static com.linkedin.kafka.cruisecontrol.analyzer.ActionAcceptance.REPLICA_REJECT;
+                                                       ^
+  symbol:   class ActionAcceptance
+  location: package com.linkedin.kafka.cruisecontrol.analyzer
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:30: error: static import only from classes and interfaces
+import static com.linkedin.kafka.cruisecontrol.analyzer.ActionAcceptance.REPLICA_REJECT;
+^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:31: error: cannot find symbol
+import static com.linkedin.kafka.cruisecontrol.analyzer.goals.GoalUtils.MIN_NUM_VALID_WINDOWS_FOR_SELF_HEALING;
+                                                             ^
+  symbol:   class GoalUtils
+  location: package com.linkedin.kafka.cruisecontrol.analyzer.goals
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:31: error: static import only from classes and interfaces
+import static com.linkedin.kafka.cruisecontrol.analyzer.goals.GoalUtils.MIN_NUM_VALID_WINDOWS_FOR_SELF_HEALING;
+^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:32: error: cannot find symbol
+import static com.linkedin.kafka.cruisecontrol.analyzer.goals.GoalUtils.replicaSortName;
+                                                             ^
+  symbol:   class GoalUtils
+  location: package com.linkedin.kafka.cruisecontrol.analyzer.goals
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:32: error: static import only from classes and interfaces
+import static com.linkedin.kafka.cruisecontrol.analyzer.goals.GoalUtils.replicaSortName;
+^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:33: error: cannot find symbol
+import static com.linkedin.kafka.cruisecontrol.analyzer.goals.GoalUtils.sortReplicasInAscendingOrderByBrokerResourceUtilization;
+                                                             ^
+  symbol:   class GoalUtils
+  location: package com.linkedin.kafka.cruisecontrol.analyzer.goals
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:33: error: static import only from classes and interfaces
+import static com.linkedin.kafka.cruisecontrol.analyzer.goals.GoalUtils.sortReplicasInAscendingOrderByBrokerResourceUtilization;
+^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:40: error: cannot find symbol
+public abstract class CapacityGoal extends AbstractGoal {
+                                           ^
+  symbol: class AbstractGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:41: error: cannot find symbol
+  private static final Logger LOG = LoggerFactory.getLogger(CapacityGoal.class);
+                       ^
+  symbol:   class Logger
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:58: error: cannot find symbol
+  CapacityGoal(BalancingConstraint constraint) {
+               ^
+  symbol:   class BalancingConstraint
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:62: error: cannot find symbol
+  protected abstract Resource resource();
+                     ^
+  symbol:   class Resource
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:87: error: cannot find symbol
+  public ActionAcceptance actionAcceptance(BalancingAction action, ClusterModel clusterModel) {
+                                           ^
+  symbol:   class BalancingAction
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:87: error: cannot find symbol
+  public ActionAcceptance actionAcceptance(BalancingAction action, ClusterModel clusterModel) {
+                                                                   ^
+  symbol:   class ClusterModel
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:87: error: cannot find symbol
+  public ActionAcceptance actionAcceptance(BalancingAction action, ClusterModel clusterModel) {
+         ^
+  symbol:   class ActionAcceptance
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:104: error: cannot find symbol
+  public ClusterModelStatsComparator clusterModelStatsComparator() {
+         ^
+  symbol:   class ClusterModelStatsComparator
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:109: error: cannot find symbol
+  public ModelCompletenessRequirements clusterModelCompletenessRequirements() {
+         ^
+  symbol:   class ModelCompletenessRequirements
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:128: error: cannot find symbol
+  protected boolean selfSatisfied(ClusterModel clusterModel, BalancingAction action) {
+                                  ^
+  symbol:   class ClusterModel
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:128: error: cannot find symbol
+  protected boolean selfSatisfied(ClusterModel clusterModel, BalancingAction action) {
+                                                             ^
+  symbol:   class BalancingAction
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:145: error: cannot find symbol
+  protected void initGoalState(ClusterModel clusterModel, OptimizationOptions optimizationOptions)
+                               ^
+  symbol:   class ClusterModel
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:145: error: cannot find symbol
+  protected void initGoalState(ClusterModel clusterModel, OptimizationOptions optimizationOptions)
+                                                          ^
+  symbol:   class OptimizationOptions
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:146: error: cannot find symbol
+      throws OptimizationFailureException {
+             ^
+  symbol:   class OptimizationFailureException
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:203: error: cannot find symbol
+  protected void updateGoalState(ClusterModel clusterModel, OptimizationOptions optimizationOptions)
+                                 ^
+  symbol:   class ClusterModel
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:203: error: cannot find symbol
+  protected void updateGoalState(ClusterModel clusterModel, OptimizationOptions optimizationOptions)
+                                                            ^
+  symbol:   class OptimizationOptions
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:204: error: cannot find symbol
+      throws OptimizationFailureException {
+             ^
+  symbol:   class OptimizationFailureException
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:222: error: cannot find symbol
+  private void ensureUtilizationUnderCapacity(ClusterModel clusterModel, OptimizationOptions optimizationOptions)
+                                              ^
+  symbol:   class ClusterModel
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:222: error: cannot find symbol
+  private void ensureUtilizationUnderCapacity(ClusterModel clusterModel, OptimizationOptions optimizationOptions)
+                                                                         ^
+  symbol:   class OptimizationOptions
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:223: error: cannot find symbol
+      throws OptimizationFailureException {
+             ^
+  symbol:   class OptimizationFailureException
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:272: error: cannot find symbol
+  protected void rebalanceForBroker(Broker broker,
+                                    ^
+  symbol:   class Broker
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:273: error: cannot find symbol
+                                    ClusterModel clusterModel,
+                                    ^
+  symbol:   class ClusterModel
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:274: error: cannot find symbol
+                                    Set<Goal> optimizedGoals,
+                                        ^
+  symbol:   class Goal
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:275: error: cannot find symbol
+                                    OptimizationOptions optimizationOptions)
+                                    ^
+  symbol:   class OptimizationOptions
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:276: error: cannot find symbol
+      throws OptimizationFailureException {
+             ^
+  symbol:   class OptimizationFailureException
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:349: error: cannot find symbol
+                               Broker broker,
+                               ^
+  symbol:   class Broker
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:352: error: cannot find symbol
+                               OptimizationOptions optimizationOptions)
+                               ^
+  symbol:   class OptimizationOptions
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:353: error: cannot find symbol
+      throws OptimizationFailureException {
+             ^
+  symbol:   class OptimizationFailureException
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:389: error: cannot find symbol
+  private boolean isUtilizationOverLimit(Broker broker,
+                                         ^
+  symbol:   class Broker
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:390: error: cannot find symbol
+                                         Resource resource,
+                                         ^
+  symbol:   class Resource
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:418: error: cannot find symbol
+  private boolean isMovementAcceptableForCapacity(Replica sourceReplica, Broker destinationBroker) {
+                                                  ^
+  symbol:   class Replica
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:418: error: cannot find symbol
+  private boolean isMovementAcceptableForCapacity(Replica sourceReplica, Broker destinationBroker) {
+                                                                         ^
+  symbol:   class Broker
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:433: error: cannot find symbol
+  private boolean isSwapAcceptableForCapacity(Replica sourceReplica, Replica destinationReplica) {
+                                              ^
+  symbol:   class Replica
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:433: error: cannot find symbol
+  private boolean isSwapAcceptableForCapacity(Replica sourceReplica, Replica destinationReplica) {
+                                                                     ^
+  symbol:   class Replica
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:451: error: cannot find symbol
+  private boolean isUtilizationUnderLimitAfterAddingLoad(Broker destinationBroker, double replicaUtilization) {
+                                                         ^
+  symbol:   class Broker
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:41: error: cannot find symbol
+  private static final Logger LOG = LoggerFactory.getLogger(CapacityGoal.class);
+                                    ^
+  symbol:   variable LoggerFactory
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:50: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:59: error: cannot find symbol
+    _balancingConstraint = constraint;
+    ^
+  symbol:   variable _balancingConstraint
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:86: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:88: error: cannot find symbol
+    Replica sourceReplica = clusterModel.broker(action.sourceBrokerId()).replica(action.topicPartition());
+    ^
+  symbol:   class Replica
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:89: error: cannot find symbol
+    Broker destinationBroker = clusterModel.broker(action.destinationBrokerId());
+    ^
+  symbol:   class Broker
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:92: error: cannot find symbol
+      case INTER_BROKER_REPLICA_SWAP:
+           ^
+  symbol:   variable INTER_BROKER_REPLICA_SWAP
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:93: error: cannot find symbol
+        Replica destinationReplica = destinationBroker.replica(action.destinationTopicPartition());
+        ^
+  symbol:   class Replica
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:94: error: cannot find symbol
+        return isSwapAcceptableForCapacity(sourceReplica, destinationReplica) ? ACCEPT : REPLICA_REJECT;
+                                                                                ^
+  symbol:   variable ACCEPT
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:94: error: cannot find symbol
+        return isSwapAcceptableForCapacity(sourceReplica, destinationReplica) ? ACCEPT : REPLICA_REJECT;
+                                                                                         ^
+  symbol:   variable REPLICA_REJECT
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:95: error: cannot find symbol
+      case INTER_BROKER_REPLICA_MOVEMENT:
+           ^
+  symbol:   variable INTER_BROKER_REPLICA_MOVEMENT
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:96: error: cannot find symbol
+      case LEADERSHIP_MOVEMENT:
+           ^
+  symbol:   variable LEADERSHIP_MOVEMENT
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:97: error: cannot find symbol
+        return isMovementAcceptableForCapacity(sourceReplica, destinationBroker) ? ACCEPT : REPLICA_REJECT;
+                                                                                   ^
+  symbol:   variable ACCEPT
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:97: error: cannot find symbol
+        return isMovementAcceptableForCapacity(sourceReplica, destinationBroker) ? ACCEPT : REPLICA_REJECT;
+                                                                                            ^
+  symbol:   variable REPLICA_REJECT
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:103: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:105: error: package GoalUtils does not exist
+    return new GoalUtils.HardGoalStatsComparator();
+                        ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:108: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:111: error: cannot find symbol
+    return new ModelCompletenessRequirements(MIN_NUM_VALID_WINDOWS_FOR_SELF_HEALING, _minMonitoredPartitionPercentage, true);
+               ^
+  symbol:   class ModelCompletenessRequirements
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:111: error: cannot find symbol
+    return new ModelCompletenessRequirements(MIN_NUM_VALID_WINDOWS_FOR_SELF_HEALING, _minMonitoredPartitionPercentage, true);
+                                             ^
+  symbol:   variable MIN_NUM_VALID_WINDOWS_FOR_SELF_HEALING
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:111: error: cannot find symbol
+    return new ModelCompletenessRequirements(MIN_NUM_VALID_WINDOWS_FOR_SELF_HEALING, _minMonitoredPartitionPercentage, true);
+                                                                                     ^
+  symbol:   variable _minMonitoredPartitionPercentage
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:114: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:127: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:129: error: cannot find symbol
+    Replica sourceReplica = clusterModel.broker(action.sourceBrokerId()).replica(action.topicPartition());
+    ^
+  symbol:   class Replica
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:130: error: cannot find symbol
+    Broker destinationBroker = clusterModel.broker(action.destinationBrokerId());
+    ^
+  symbol:   class Broker
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:144: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:148: error: cannot find symbol
+    Load recentClusterLoad = clusterModel.load();
+    ^
+  symbol:   class Load
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:153: error: cannot find symbol
+    double allowedCapacity = capacity * _balancingConstraint.capacityThreshold(resource());
+                                        ^
+  symbol:   variable _balancingConstraint
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:156: error: cannot find symbol
+      Set<Integer> brokersAllowedReplicaMove = GoalUtils.aliveBrokersNotExcludedForReplicaMove(clusterModel, optimizationOptions);
+                                               ^
+  symbol:   variable GoalUtils
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:159: error: cannot find symbol
+        throw new OptimizationFailureException(String.format("[%s] All alive brokers are excluded from replica moves.", name()),
+                  ^
+  symbol:   class OptimizationFailureException
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:167: error: cannot find symbol
+      int numBrokersToAdd = (int) (missingCapacity / (typicalCapacity * _balancingConstraint.capacityThreshold(resource())));
+                                                                        ^
+  symbol:   variable _balancingConstraint
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:169: error: cannot find symbol
+      throw new OptimizationFailureException(
+                ^
+  symbol:   class OptimizationFailureException
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:171: error: cannot find symbol
+                        existingUtilization, allowedCapacity, _balancingConstraint.capacityThreshold(resource())),
+                                                              ^
+  symbol:   variable _balancingConstraint
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:183: error: cannot find symbol
+                              .trackSortedReplicasFor(replicaSortName(this, true, false), clusterModel);
+                                                      ^
+  symbol:   method replicaSortName(CapacityGoal,boolean,boolean)
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:182: error: cannot find symbol
+                              .setScoreFunc(ReplicaSortFunctionFactory.reverseSortByMetricGroupValue(resource().name()))
+                                            ^
+  symbol:   variable ReplicaSortFunctionFactory
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:181: error: cannot find symbol
+                              .maybeAddPriorityFunc(ReplicaSortFunctionFactory.prioritizeImmigrants(), !onlyMoveImmigrantReplicas)
+                                                    ^
+  symbol:   variable ReplicaSortFunctionFactory
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:180: error: cannot find symbol
+                              .addPriorityFunc(ReplicaSortFunctionFactory.prioritizeOfflineReplicas())
+                                               ^
+  symbol:   variable ReplicaSortFunctionFactory
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:179: error: cannot find symbol
+                              .addSelectionFunc(ReplicaSortFunctionFactory.selectReplicasBasedOnExcludedTopics(excludedTopics))
+                                                ^
+  symbol:   variable ReplicaSortFunctionFactory
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:178: error: cannot find symbol
+    new SortedReplicasHelper().maybeAddSelectionFunc(ReplicaSortFunctionFactory.selectImmigrants(), onlyMoveImmigrantReplicas)
+                                                     ^
+  symbol:   variable ReplicaSortFunctionFactory
+  location: class CapacityGoal
+/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java:178: error: cannot find symbol
+    new SortedReplicasHelper().maybeAddSelectionFunc(ReplicaSortFunctionFactory.selectImmigrants(), onlyMoveImmigrantReplicas)
+        ^
+  symbol:   class SortedReplicasHelper
+  location: class CapacityGoal
+Exception in thread "main" java.lang.RuntimeException: java.lang.RuntimeException: boom
+	at com.sun.tools.javac.main.Main.compile(Main.java:559)
+	at com.sun.tools.javac.main.Main.compile(Main.java:381)
+	at com.sun.tools.javac.main.Main.compile(Main.java:370)
+	at com.sun.tools.javac.main.Main.compile(Main.java:361)
+	at com.sun.tools.javac.Main.compile(Main.java:56)
+	at com.sun.tools.javac.Main.main(Main.java:42)
+Caused by: java.lang.RuntimeException: boom
+	at com.sourcegraph.semanticdb_javac.SemanticdbTaskListener.finished(SemanticdbTaskListener.java:76)
+	at com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:681)
+	at com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:111)
+	at com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1342)
+	at com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1296)
+	at com.sun.tools.javac.main.JavaCompiler.compile2(JavaCompiler.java:901)
+	at com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:860)
+	at com.sun.tools.javac.main.Main.compile(Main.java:523)
+	... 5 more
+Caused by: com.sourcegraph.semanticdb_javac.CompilationUnitException: file:/Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/analyzer/goals/CapacityGoal.java
+Caused by: java.lang.NullPointerException
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.semanticdbRange(SemanticdbVisitor.java:288)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.semanticdbOccurrence(SemanticdbVisitor.java:341)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.emitSymbolOccurrence(SemanticdbVisitor.java:84)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitMemberReference(SemanticdbVisitor.java:228)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitMemberReference(SemanticdbVisitor.java:30)
+	at com.sun.tools.javac.tree.JCTree$JCMemberReference.accept(JCTree.java:1987)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scan(TreeScanner.java:91)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:99)
+	at com.sun.source.util.TreeScanner.visitMethodInvocation(TreeScanner.java:271)
+	at com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1477)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.visitMemberSelect(TreeScanner.java:346)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitMemberSelect(SemanticdbVisitor.java:240)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitMemberSelect(SemanticdbVisitor.java:30)
+	at com.sun.tools.javac.tree.JCTree$JCFieldAccess.accept(JCTree.java:1903)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.visitMethodInvocation(TreeScanner.java:270)
+	at com.sun.tools.javac.tree.JCTree$JCMethodInvocation.accept(JCTree.java:1477)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.visitVariable(TreeScanner.java:153)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitVariable(SemanticdbVisitor.java:209)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitVariable(SemanticdbVisitor.java:30)
+	at com.sun.tools.javac.tree.JCTree$JCVariableDecl.accept(JCTree.java:864)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.scan(TreeScanner.java:91)
+	at com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:162)
+	at com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:918)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.visitEnhancedForLoop(TreeScanner.java:188)
+	at com.sun.tools.javac.tree.JCTree$JCEnhancedForLoop.accept(JCTree.java:1043)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scan(TreeScanner.java:91)
+	at com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:162)
+	at com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:918)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.visitIf(TreeScanner.java:237)
+	at com.sun.tools.javac.tree.JCTree$JCIf.accept(JCTree.java:1277)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.scan(TreeScanner.java:91)
+	at com.sun.source.util.TreeScanner.visitBlock(TreeScanner.java:162)
+	at com.sun.tools.javac.tree.JCTree$JCBlock.accept(JCTree.java:918)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.visitMethod(TreeScanner.java:144)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitMethod(SemanticdbVisitor.java:199)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitMethod(SemanticdbVisitor.java:30)
+	at com.sun.tools.javac.tree.JCTree$JCMethodDecl.accept(JCTree.java:800)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:81)
+	at com.sun.source.util.TreeScanner.scan(TreeScanner.java:91)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:99)
+	at com.sun.source.util.TreeScanner.visitClass(TreeScanner.java:133)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitClass(SemanticdbVisitor.java:173)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.visitClass(SemanticdbVisitor.java:30)
+	at com.sun.tools.javac.tree.JCTree$JCClassDecl.accept(JCTree.java:720)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sun.source.util.TreeScanner.scan(TreeScanner.java:91)
+	at com.sun.source.util.TreeScanner.scanAndReduce(TreeScanner.java:99)
+	at com.sun.source.util.TreeScanner.visitCompilationUnit(TreeScanner.java:120)
+	at com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:550)
+	at com.sun.source.util.TreePathScanner.scan(TreePathScanner.java:68)
+	at com.sourcegraph.semanticdb_javac.SemanticdbVisitor.buildTextDocument(SemanticdbVisitor.java:68)
+	at com.sourcegraph.semanticdb_javac.SemanticdbTaskListener.onFinishedAnalyze(SemanticdbTaskListener.java:85)
+	at com.sourcegraph.semanticdb_javac.SemanticdbTaskListener.finished(SemanticdbTaskListener.java:64)
+	at com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:681)
+	at com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:111)
+	at com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1342)
+	at com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1296)
+	at com.sun.tools.javac.main.JavaCompiler.compile2(JavaCompiler.java:901)
+	at com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:860)
+	at com.sun.tools.javac.main.Main.compile(Main.java:523)
+	at com.sun.tools.javac.main.Main.compile(Main.java:381)
+	at com.sun.tools.javac.main.Main.compile(Main.java:370)
+	at com.sun.tools.javac.main.Main.compile(Main.java:361)
+	at com.sun.tools.javac.Main.compile(Main.java:56)
+	at com.sun.tools.javac.Main.main(Main.java:42)
+2023.03.14 23:09:21 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:21 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:21 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:36 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:36 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:36 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:36 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:39 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/BrokerStats.java
+2023.03.14 23:09:40 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:40 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:09:40 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:17:32 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/CruiseControlMetricsProcessor.java
+2023.03.14 23:17:32 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/CruiseControlMetricsProcessor.java
+2023.03.14 23:17:33 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/CruiseControlMetricsProcessor.java
+2023.03.14 23:17:46 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:17:51 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:17:51 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:17:52 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:17:53 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:18:02 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:18:02 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:18:02 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/monitor/sampling/prometheus/PrometheusMetricSampler.java
+2023.03.14 23:19:09 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:19:09 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/JsonResponseField.java
+Mar 14, 2023 11:19:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 14892
+2023.03.14 23:19:11 WARN  no build target for: /Users/xinyu.liu/src/cruise-control/cruise-control/src/main/java/com/linkedin/kafka/cruisecontrol/servlet/response/stats/SingleBrokerStats.java
+2023.03.14 23:19:11 WARN  Using indexes to guess the definition of host

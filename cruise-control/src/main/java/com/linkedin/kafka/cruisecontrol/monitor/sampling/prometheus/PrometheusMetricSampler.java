@@ -176,7 +176,7 @@ public class PrometheusMetricSampler extends AbstractMetricSampler {
         int resultsSkipped = 0;
         for (Map.Entry<RawMetricType, String> metricToQueryEntry : _metricToPrometheusQueryMap.entrySet()) {
             
-            LOG.info(">>>>>>>>>>>>>>>>>>>>>> for loop PrometheusMetricSampler");
+            // LOG.info(">>>>>>>>>>>>>>>>>>>>>> for loop PrometheusMetricSampler");
 
             final RawMetricType metricType = metricToQueryEntry.getKey();
             final String prometheusQuery = metricToQueryEntry.getValue();
@@ -190,7 +190,7 @@ public class PrometheusMetricSampler extends AbstractMetricSampler {
                 throw new SamplingException("Could not query metrics from Prometheus");
             }
 
-            LOG.info(">>>>>>>>>>>>>>>>>>>>>> prometheusQueryResults size {}", prometheusQueryResults.size());
+            // LOG.info(">>>>>>>>>>>>>>>>>>>>>> prometheusQueryResults size {}", prometheusQueryResults.size());
 
             for (PrometheusQueryResult result : prometheusQueryResults) {
                 try {
