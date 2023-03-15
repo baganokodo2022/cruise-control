@@ -54,12 +54,7 @@ public abstract class AbstractMetricSampler implements MetricSampler {
     @Override
     public Samples getSamples(MetricSamplerOptions metricSamplerOptions) throws SamplingException {
 
-        LOG.info(">>>>>>>>>>>>>>>>> getSamples");
-
-
         int totalMetricsAdded = retrieveMetricsForProcessing(metricSamplerOptions);
-
-        LOG.info(">>>>>>>>>>>>>>>>> totalMetricsAdded {}", totalMetricsAdded);
 
         try {
             if (totalMetricsAdded > 0) {

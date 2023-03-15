@@ -155,28 +155,15 @@ public class PrometheusMetricSampler extends AbstractMetricSampler {
         for (Node node : cluster.nodes()) {
             // for MSK private link
             // node.host b-all.dataplatformkafka.i1ndju.c12.kafka.us-east-1.amazonaws.com, node.id 1
-            final String expectedHostPrefix = "b-" + node.id();
-            if (node.host().indexOf(expectedHostPrefix) != 0) {
-                int splitIndex = node.host().indexOf(".");
-                _hostToBrokerIdMap.put(
-                    expectedHostPrefix + node.host().substring(splitIndex),
-                    node.id());
-            } else {
-                _hostToBrokerIdMap.put(node.host(), node.id());
-            }
+            _hostToBrokerIdMap.put(convertMSKPrivateLinkHostToBrokerHost(node), node.id());
         }
     }
 
     @Override
     protected int retrieveMetricsForProcessing(MetricSamplerOptions metricSamplerOptions) throws SamplingException {
-        
-        LOG.info(">>>>>>>>>>>>>>>>>>>>>> retrieveMetricsForProcessing PrometheusMetricSampler");
-
         int metricsAdded = 0;
         int resultsSkipped = 0;
         for (Map.Entry<RawMetricType, String> metricToQueryEntry : _metricToPrometheusQueryMap.entrySet()) {
-            
-            // LOG.info(">>>>>>>>>>>>>>>>>>>>>> for loop PrometheusMetricSampler");
 
             final RawMetricType metricType = metricToQueryEntry.getKey();
             final String prometheusQuery = metricToQueryEntry.getValue();
@@ -190,13 +177,8 @@ public class PrometheusMetricSampler extends AbstractMetricSampler {
                 throw new SamplingException("Could not query metrics from Prometheus");
             }
 
-            // LOG.info(">>>>>>>>>>>>>>>>>>>>>> prometheusQueryResults size {}", prometheusQueryResults.size());
-
             for (PrometheusQueryResult result : prometheusQueryResults) {
                 try {
-
-                    // LOG.info(">>>>>>>>>>>>>>>>>>>>>> PrometheusQueryResult {}", result);
-
                     switch (metricType.metricScope()) {
                         case BROKER:
                             metricsAdded += addBrokerMetrics(metricSamplerOptions.cluster(), metricType, result);
@@ -220,7 +202,6 @@ public class PrometheusMetricSampler extends AbstractMetricSampler {
 
                     This can be really frequent, and hence, we are only going to log them at trace level.
                      */
-                    LOG.error(">>>>>>>>>>> Invalid query result received from Prometheus for query {}", prometheusQuery, e);
 
                     LOG.trace("Invalid query result received from Prometheus for query {}", prometheusQuery, e);
                     resultsSkipped++;
@@ -234,21 +215,12 @@ public class PrometheusMetricSampler extends AbstractMetricSampler {
     private int addBrokerMetrics(Cluster cluster, RawMetricType metricType, PrometheusQueryResult queryResult)
         throws InvalidPrometheusResultException {
         int brokerId = getBrokerId(cluster, queryResult);
-
-        // LOG.info(">>>>>>>>>>>>>> addBrokerMetrics broker ID {} ", brokerId);
-
         int metricsAdded = 0;
         for (PrometheusValue value : queryResult.values()) {
-
-            // LOG.info(">>>>>>>>>>>>>> PrometheusValue {}, {} ", metricType, value.value());
-
             addMetricForProcessing(new BrokerMetric(metricType, value.epochSeconds() * SEC_TO_MS,
                                    brokerId, value.value()));
             metricsAdded++;
         }
-
-        // LOG.info(">>>>>>>>>>>>>> metricsAdded {} ", metricsAdded);
-
         return metricsAdded;
     }
 
@@ -289,12 +261,9 @@ public class PrometheusMetricSampler extends AbstractMetricSampler {
         }
         Integer brokerId;
 
-        // LOG.info(">>>>>>>>>>>>>> broker hostPort from prometheus {} ", hostPort);
         // b-9.dataplatformkafka.i1ndju.c12.kafka.us-east-1.amazonaws.com:11001
         String hostName = hostPort.split(":")[0];
         brokerId = getBrokerIdForHostName(hostName, cluster);
-
-        // LOG.info(">>>>>>>>>>>>>> broker ID from prometheus {} ", brokerId);
 
         if (brokerId == null) {
             throw new InvalidPrometheusResultException(String.format(

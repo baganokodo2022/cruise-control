@@ -12,6 +12,7 @@ import com.linkedin.kafka.cruisecontrol.metricsreporter.exception.UnknownVersion
 import com.linkedin.kafka.cruisecontrol.metricsreporter.metric.CruiseControlMetric;
 import com.linkedin.kafka.cruisecontrol.metricsreporter.metric.MetricSerde;
 import com.linkedin.kafka.cruisecontrol.metricsreporter.metric.RawMetricType;
+import com.linkedin.kafka.cruisecontrol.model.Broker;
 import com.linkedin.kafka.cruisecontrol.model.ModelUtils;
 import com.linkedin.kafka.cruisecontrol.monitor.metricdefinition.KafkaMetricDef;
 import com.linkedin.kafka.cruisecontrol.monitor.sampling.holder.BrokerLoad;
@@ -228,28 +229,16 @@ public class SamplingUtils {
 
 
     if (skipBuildingBrokerMetricSample(brokerLoad, node.id())) {
-
-      LOG.info(">>>>>>>>>>>>>>>>> skipBuildingBrokerMetricSample");
-
       return null;
     }
     MetricDef brokerMetricDef = KafkaMetricDef.brokerMetricDef();
 
-    LOG.info(">>>>>>>>>>>>>>>>> buildBrokerMetricSample node.host {}, node.port {}, node.id {}", node.host(), node.port(), node.id());
-
-    final String expectedHostPrefix = "b-" + node.id();
-    final String host = node.host().indexOf(expectedHostPrefix) != 0 ?
-         expectedHostPrefix + node.host().substring(node.host().indexOf(".")) : node.host();
-
-    LOG.info(">>>>>>>>>>>>>>>>> HOST {}", host);
+    final String host = convertMSKPrivateLinkHostToBrokerHost(node);
 
     BrokerMetricSample bms = new BrokerMetricSample(host, node.id(), brokerLoad.brokerSampleDeserializationVersion());
 
     for (Map.Entry<Byte, Set<RawMetricType>> entry : RawMetricType.brokerMetricTypesDiffByVersion().entrySet()) {
       for (RawMetricType rawBrokerMetricType : entry.getValue()) {
-
-        // LOG.info(">>>>>>>>>>>>>>>>> rawBrokerMetric {}, ", rawBrokerMetricType);
-
         // We require the broker to report all the metric types (including nullable values). Otherwise we skip the broker.
         if (!brokerLoad.brokerMetricAvailable(rawBrokerMetricType)) {
           LOG.warn("{}broker {} because it does not have {} metrics (serde version {}) or the metrics are inconsistent.",
@@ -259,9 +248,6 @@ public class SamplingUtils {
           MetricInfo metricInfo = brokerMetricDef.metricInfo(KafkaMetricDef.forRawMetricType(rawBrokerMetricType).name());
           double metricValue = brokerLoad.brokerMetric(rawBrokerMetricType);
           bms.record(metricInfo, metricValue);
-
-          // LOG.info(">>>>>>>>>>>>>>>>> broker metric {}, {} ", metricInfo, metricValue);
-
         }
       }
     }
@@ -317,35 +303,19 @@ public class SamplingUtils {
    */
   private static boolean skipBuildingBrokerMetricSample(BrokerLoad brokerLoad, int brokerId) {
 
-    LOG.info(">>>>>>>>>>>>>>>>> skipBuildingBrokerMetricSample brokerId {}, brokerLoad{}", brokerId, brokerLoad);
-
-    LOG.info(">>>>>>>>>>>>>>>>> skipBuildingBrokerMetricSample minRequiredBrokerMetricsAvailable {}", brokerLoad.minRequiredBrokerMetricsAvailable());
-
-
     if (brokerLoad == null) {
-
-      LOG.info(">>>>>>>>>>>>>>>>> {}broker {} because all broker metrics are missing.", SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
-
-
       LOG.warn("{}broker {} because all broker metrics are missing.", SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
       return true;
     } else if (!brokerLoad.minRequiredBrokerMetricsAvailable()) {
-      
-      LOG.info(">>>>>>>>>>>>>>>>> brokerLoad.minRequiredBrokerMetricsAvailable {}", brokerLoad.minRequiredBrokerMetricsAvailable());
-      LOG.info(">>>>>>>>>>>>>>>>> brokerLoad.missingBrokerMetricsInMinSupportedVersion.size {}", brokerLoad.missingBrokerMetricsInMinSupportedVersion().size());
-
 
       if (brokerLoad.missingBrokerMetricsInMinSupportedVersion().size() == 0) {
         
-        LOG.info(">>>>>>>>>>>>>>>>>{}broker {} because there are not enough topic metrics to generate broker metrics.",
         SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
         
         LOG.warn("{}broker {} because there are not enough topic metrics to generate broker metrics.",
                  SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
       } else {
-        LOG.info(">>>>>>>>>>>>>>>>>{}broker {} because the following required metrics are missing {}.", SKIP_BUILDING_SAMPLE_PREFIX,
         brokerId, brokerLoad.missingBrokerMetricsInMinSupportedVersion());
-
         LOG.warn("{}broker {} because the following required metrics are missing {}.", SKIP_BUILDING_SAMPLE_PREFIX,
                  brokerId, brokerLoad.missingBrokerMetricsInMinSupportedVersion());
       }
@@ -425,4 +395,20 @@ public class SamplingUtils {
     consumerProps.setProperty(ConsumerConfig.RECONNECT_BACKOFF_MS_CONFIG, configs.get(RECONNECT_BACKOFF_MS_CONFIG).toString());
     return new KafkaConsumer<>(consumerProps);
   }
+
+  public static String convertMSKPrivateLinkHostToBrokerHost(Node node) {
+    return convertMSKPrivateLinkHostToBrokerHost(node.host(), node.id());
+  }
+
+  public static String convertMSKPrivateLinkHostToBrokerHost(Broker broker) {
+    return convertMSKPrivateLinkHostToBrokerHost(broker.host().name(), broker.id());
+  }
+
+  private static String convertMSKPrivateLinkHostToBrokerHost(String privatelinkHost, int brokerId) {
+    final String expectedHostPrefix = "b-" + brokerId;
+    final String host = privatelinkHost.indexOf(expectedHostPrefix) != 0 ?
+         expectedHostPrefix + privatelinkHost.substring(privatelinkHost.indexOf(".")) : privatelinkHost;
+    return host;
+  }
+
 }

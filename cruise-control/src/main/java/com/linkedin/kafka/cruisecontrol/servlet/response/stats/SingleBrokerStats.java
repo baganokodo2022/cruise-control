@@ -11,6 +11,8 @@ import com.linkedin.kafka.cruisecontrol.servlet.response.JsonResponseClass;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.linkedin.kafka.cruisecontrol.monitor.sampling.SamplingUtils.convertMSKPrivateLinkHostToBrokerHost;
+
 @JsonResponseClass
 public class SingleBrokerStats extends BasicStats {
   @JsonResponseField
@@ -32,10 +34,7 @@ public class SingleBrokerStats extends BasicStats {
 
   SingleBrokerStats(Broker broker, double potentialBytesOutRate, boolean isEstimated) {
     super(broker, potentialBytesOutRate);
-
-    final String expectedHostPrefix = "b-" + broker.id();
-    _host = (broker.host().name().indexOf(expectedHostPrefix) != 0)?
-        expectedHostPrefix + broker.host().name().substring(broker.host().name().indexOf(".")) : broker.host().name();
+    _host = convertMSKPrivateLinkHostToBrokerHost(broker);    
     _id = broker.id();
     _state = broker.state();
     _isEstimated = isEstimated;

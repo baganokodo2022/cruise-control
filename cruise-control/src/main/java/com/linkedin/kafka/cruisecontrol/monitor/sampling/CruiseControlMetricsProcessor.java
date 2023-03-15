@@ -59,16 +59,11 @@ public class CruiseControlMetricsProcessor {
 
     int brokerId = metric.brokerId();
 
-    // LOG.info(">>>>>>>>>>>>>> addMetric brokerID {}, metric {} ", brokerId, metric);
-
     LOG.trace("Adding cruise control metric {}", metric);
     _maxMetricTimestamp = Math.max(metric.time(), _maxMetricTimestamp);
     _brokerLoad.compute(brokerId, (bid, load) -> {
       BrokerLoad brokerLoad = load == null ? new BrokerLoad() : load;
       brokerLoad.recordMetric(metric);
-
-      // LOG.info(">>>>>>>>>>>>>> bid {}, load {} ", bid, load);
-
       return brokerLoad;
     });
   }
@@ -121,21 +116,13 @@ public class CruiseControlMetricsProcessor {
                                 Set<TopicPartition> partitionsDotNotHandled,
                                 MetricSampler.SamplingMode samplingMode) {
 
-    LOG.info(">>>>>>>>>>>>>>>>>>>>>> process 1");
-
-    // LOG.info(">>>>>>>>>>>>>>>>>>>>>> cluster {}", cluster);
-
     updateCachedNumCoresByBroker(cluster);
     // Theoretically we should not move forward at all if a broker reported a different all topic bytes in from all
     // its resident replicas. However, it is not clear how often this would happen yet. At this point we still
     // continue process the other brokers. Later on if in practice all topic bytes in and the aggregation value is
     // rarely inconsistent we can just stop the sample generation when the this happens.
-    
-    LOG.info(">>>>>>>>>>>>>>>>>>>>>> _brokerLoad {}", _brokerLoad.size());
 
     _brokerLoad.forEach((broker, load) -> load.prepareBrokerMetrics(cluster, broker, _maxMetricTimestamp));
-
-    LOG.info(">>>>>>>>>>>>>>>>>>>>>> process 2");
 
     // Get partition metric samples.
     Map<Integer, Integer> skippedPartitionByBroker = null;
@@ -144,18 +131,11 @@ public class CruiseControlMetricsProcessor {
       skippedPartitionByBroker = addPartitionMetricSamples(cluster, partitionsDotNotHandled, partitionMetricSamples);
     }
 
-    LOG.info(">>>>>>>>>>>>>>>>>>>>>> process 3");
-
     // Get broker metric samples.
     int skippedBroker = 0;
     Set<BrokerMetricSample> brokerMetricSamples = new HashSet<>();
 
-    LOG.info(">>>>>>>>>>>>>>>>>>>>>> samplingMode {}", samplingMode);
-
     if (samplingMode == MetricSampler.SamplingMode.ALL || samplingMode == MetricSampler.SamplingMode.BROKER_METRICS_ONLY) {
-
-      LOG.info(">>>>>>>>>>>>>>>>>>>>>> process 4");
-
       skippedBroker = addBrokerMetricSamples(cluster, brokerMetricSamples);
     }
 
@@ -243,17 +223,10 @@ public class CruiseControlMetricsProcessor {
   private int addBrokerMetricSamples(Cluster cluster, Set<BrokerMetricSample> brokerMetricSamples) {
     int skippedBroker = 0;
     for (Node node : cluster.nodes()) {
-
-      // LOG.info(">>>>>>>>>>>>>>>>> addBrokerMetricSamples node.host {}, node.port {}, node.id {}", node.host(), node.port(), node.id());
-      // >>>>>>>>>>>>>>>>> node.host b-all.dataplatformkafka.i1ndju.c12.kafka.us-east-1.amazonaws.com, node.port 6011, node.id 11
-
       try {
         BrokerMetricSample sample = buildBrokerMetricSample(node, _brokerLoad, _maxMetricTimestamp);
         if (sample != null) {
           LOG.trace("Added broker metric sample for broker {}.", node.id());
-
-          LOG.info(">>>>>>>>>>>>>>>>> Added broker metric sample for broker {}.", node.id());
-
           brokerMetricSamples.add(sample);
         } else {
           skippedBroker++;

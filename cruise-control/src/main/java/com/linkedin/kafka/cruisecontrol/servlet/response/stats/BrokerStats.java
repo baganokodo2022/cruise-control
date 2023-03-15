@@ -21,6 +21,7 @@ import java.util.concurrent.ConcurrentSkipListMap;
 
 import static com.linkedin.kafka.cruisecontrol.servlet.response.ResponseUtils.JSON_VERSION;
 import static com.linkedin.kafka.cruisecontrol.servlet.response.ResponseUtils.VERSION;
+import static com.linkedin.kafka.cruisecontrol.monitor.sampling.SamplingUtils.convertMSKPrivateLinkHostToBrokerHost;
 
 
 /**
@@ -62,10 +63,8 @@ public class BrokerStats extends AbstractCruiseControlResponse {
    */
   public void addSingleBrokerStats(Broker broker, double potentialBytesOutRate, boolean isEstimated) {
     
-    final String expectedHostPrefix = "b-" + broker.id();
-    final String host = (broker.host().name().indexOf(expectedHostPrefix) != 0)?
-        expectedHostPrefix + broker.host().name().substring(broker.host().name().indexOf(".")) : broker.host().name();
-    
+    final String host = convertMSKPrivateLinkHostToBrokerHost(broker);
+
     String rack = broker.rack().id();
     SingleBrokerStats singleBrokerStats = new SingleBrokerStats(broker, potentialBytesOutRate, isEstimated);
     _brokerStats.add(singleBrokerStats);
