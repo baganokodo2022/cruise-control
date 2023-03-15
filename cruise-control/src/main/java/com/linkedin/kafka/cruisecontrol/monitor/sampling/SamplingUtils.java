@@ -308,14 +308,10 @@ public class SamplingUtils {
       return true;
     } else if (!brokerLoad.minRequiredBrokerMetricsAvailable()) {
 
-      if (brokerLoad.missingBrokerMetricsInMinSupportedVersion().size() == 0) {
-        
-        SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
-        
+      if (brokerLoad.missingBrokerMetricsInMinSupportedVersion().size() == 0) {        
         LOG.warn("{}broker {} because there are not enough topic metrics to generate broker metrics.",
                  SKIP_BUILDING_SAMPLE_PREFIX, brokerId);
       } else {
-        brokerId, brokerLoad.missingBrokerMetricsInMinSupportedVersion());
         LOG.warn("{}broker {} because the following required metrics are missing {}.", SKIP_BUILDING_SAMPLE_PREFIX,
                  brokerId, brokerLoad.missingBrokerMetricsInMinSupportedVersion());
       }
@@ -397,14 +393,14 @@ public class SamplingUtils {
   }
 
   public static String convertMSKPrivateLinkHostToBrokerHost(Node node) {
-    return convertMSKPrivateLinkHostToBrokerHost(node.host(), node.id());
+    return _convertMSKPrivateLinkHostToBrokerHost(node.host(), node.id());
   }
 
   public static String convertMSKPrivateLinkHostToBrokerHost(Broker broker) {
-    return convertMSKPrivateLinkHostToBrokerHost(broker.host().name(), broker.id());
+    return _convertMSKPrivateLinkHostToBrokerHost(broker.host().name(), broker.id());
   }
 
-  private static String convertMSKPrivateLinkHostToBrokerHost(String privatelinkHost, int brokerId) {
+  private static String _convertMSKPrivateLinkHostToBrokerHost(String privatelinkHost, int brokerId) {
     final String expectedHostPrefix = "b-" + brokerId;
     final String host = privatelinkHost.indexOf(expectedHostPrefix) != 0 ?
          expectedHostPrefix + privatelinkHost.substring(privatelinkHost.indexOf(".")) : privatelinkHost;
